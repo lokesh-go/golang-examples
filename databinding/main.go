@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	dataBindingPkg "golang-examples/databinding/pkg"
+	pkg "github.com/lokesh-go/golang-examples/databinding/pkg"
 )
 
 type testStruct struct {
@@ -21,16 +21,15 @@ func main() {
 
 	// Lets bind testMap data into struct
 	// Firstly we have to do json encode
-	bytes, err := dataBindingPkg.JSONMarshal(testMap)
+	bytes, err := pkg.JSONMarshal(testMap)
 	if err != nil {
 		log.Fatal(err)
 	}
 
 	// Now unmarshal json encoded data into struct
 	tstruct := testStruct{}
-	err = dataBindingPkg.JSONUnmarshal(bytes, &tstruct)
+	err = pkg.JSONUnmarshal(bytes, &tstruct)
 	if err != nil {
 		log.Fatal(err)
 	}
-
 }

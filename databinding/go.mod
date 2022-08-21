@@ -1,4 +1,4 @@
-module golang-examples/databinding
+module github.com/lokesh-go/golang-examples/databinding
 
 go 1.16
 
