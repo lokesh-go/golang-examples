@@ -35,5 +35,18 @@ func main() {
 	}
 
 	// Prints
+	// Basically we had used json marshal & unmarshal method to bind the data
 	printPkg.PrintWithNewLine(tstruct)
+
+	// Now data binding using mapstructure
+	// Basically it is a third party data binding provider
+	// which is binding data one to another
+	output := testStruct{}
+	err = pkg.MapStructureDecode(testMap, &output)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Prints
+	printPkg.Print(output)
 }
