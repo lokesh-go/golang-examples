@@ -1,2 +1,4 @@
+github.com/lokesh-go/golang-examples/print v0.0.0-20220821162541-cfcd0ef00014 h1:WqfiNM9NGHULdEG08VSOmzQYu7tn/ZsYHtMxbRwvpbQ=
+github.com/lokesh-go/golang-examples/print v0.0.0-20220821162541-cfcd0ef00014/go.mod h1:6jjOjdlh3KVjkOHsrk73M3/VezXPIfwZ0EcnvM8dewU=
 github.com/mitchellh/mapstructure v1.5.0 h1:jeMsZIYE/09sWLaz43PL7Gy6RuMjD2eJVyuac5Z2hdY=
 github.com/mitchellh/mapstructure v1.5.0/go.mod h1:bFUtVrKA4DC2yAKiSyO/QUcy7e+RRV2QTWOzhPopBRo=

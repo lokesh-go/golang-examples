@@ -1,3 +1,6 @@
+# github.com/lokesh-go/golang-examples/print v0.0.0-20220821162541-cfcd0ef00014
+## explicit
+github.com/lokesh-go/golang-examples/print/pkg
 # github.com/mitchellh/mapstructure v1.5.0
 ## explicit
 github.com/mitchellh/mapstructure

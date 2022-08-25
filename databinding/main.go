@@ -4,6 +4,7 @@ import (
 	"log"
 
 	pkg "github.com/lokesh-go/golang-examples/databinding/pkg"
+	printPkg "github.com/lokesh-go/golang-examples/print/pkg"
 )
 
 type testStruct struct {
@@ -32,4 +33,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
+
+	// Prints
+	printPkg.PrintWithNewLine(tstruct)
 }
