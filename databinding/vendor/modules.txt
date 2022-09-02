@@ -4,3 +4,12 @@ github.com/lokesh-go/golang-examples/print/pkg
 # github.com/mitchellh/mapstructure v1.5.0
 ## explicit
 github.com/mitchellh/mapstructure
+# go.mongodb.org/mongo-driver v1.10.1
+## explicit
+go.mongodb.org/mongo-driver/bson
+go.mongodb.org/mongo-driver/bson/bsoncodec
+go.mongodb.org/mongo-driver/bson/bsonoptions
+go.mongodb.org/mongo-driver/bson/bsonrw
+go.mongodb.org/mongo-driver/bson/bsontype
+go.mongodb.org/mongo-driver/bson/primitive
+go.mongodb.org/mongo-driver/x/bsonx/bsoncore
