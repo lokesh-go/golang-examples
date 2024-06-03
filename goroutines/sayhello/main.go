@@ -6,7 +6,7 @@ import (
 )
 
 /*
-Notes: Go follows a model of concurrency called the FORK-JOIN model.
+Go follows a model of concurrency called the FORK-JOIN model.
 Fork - Split off a child branch of execution to be run concurrently with its parent.
 Join - At some point in the future, these concurrent branches of execution will join back together.
 Where the child rejoins the parent is called a JOIN POINT.
