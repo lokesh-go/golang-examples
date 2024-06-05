@@ -14,10 +14,12 @@ func main() {
 	before := memConsumed()
 
 	var wg sync.WaitGroup
+	ch := make(chan interface{})
 	wg.Add(numGoroutines)
 	for i := numGoroutines; i > 0; i-- {
-		go emptyGoroutine(&wg)
+		go emptyGoroutine(&wg, ch)
 	}
+	close(ch)
 	wg.Wait()
 
 	after := memConsumed()
@@ -25,8 +27,9 @@ func main() {
 	fmt.Printf("%.3fkb", float64(after-before)/numGoroutines/1000)
 }
 
-func emptyGoroutine(wg *sync.WaitGroup) {
+func emptyGoroutine(wg *sync.WaitGroup, ch <-chan interface{}) {
 	defer wg.Done()
+	<-ch
 }
 
 func memConsumed() uint64 {
