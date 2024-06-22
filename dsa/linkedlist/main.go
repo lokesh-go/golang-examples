@@ -66,7 +66,7 @@ func (l *linkedList) insertAtPosition(data, pos int) {
 	}
 
 	current := l.head
-	for i := 0; i < pos - 1 && current != nil; i ++ {
+	for i := 0; i < pos-1 && current != nil; i++ {
 		current = current.next
 	}
 
@@ -119,24 +119,31 @@ func main() {
 	linkedList := new()
 
 	// Insert value at beginning
+	// Time Complexity - O(1)
 	linkedList.insertAtBeginning(5)
 
 	// Prints
+	// Time Complexity - O(n)
 	linkedList.display()
 
 	// Insert value at last
+	// Time Complexity - O(n)
 	linkedList.insertAtLast(10)
 
 	// Prints
 	linkedList.display()
 
-	// Insert value at last
+	// Insert value at the position
+	// Time Complexity - O(n)
+	// Time Complexity - O(1) - at the beginning
 	linkedList.insertAtPosition(999, 1)
 
 	// Prints
 	linkedList.display()
 
 	// Delete a node
+	// Time Complexity - O(n)
+	// Time Complexity - O(1) - node deleted is head
 	linkedList.delete(10)
 
 	// Prints
