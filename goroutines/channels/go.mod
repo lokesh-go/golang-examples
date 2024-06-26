@@ -1,3 +1,3 @@
-module github.com/golang-examples/goroutines/channels
+module github.com/lokesh-go/golang-examples/goroutines/channels
 
-go 1.21.1
+go 1.22.4
