@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/golang-examples/goroutines/channels/ok"
-	"github.com/golang-examples/goroutines/channels/simple"
+	"github.com/lokesh-go/golang-examples/goroutines/channels/ok"
+	"github.com/lokesh-go/golang-examples/goroutines/channels/simple"
 )
 
 func main() {
