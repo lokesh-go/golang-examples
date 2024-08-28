@@ -1,9 +1,9 @@
-package questions
+package main
 
-func groupAnagrams(strs []string) [][]string {
+func groupAnagrams(input []string) [][]string {
 	type key [26]byte
-	g := make(map[key][]string, len(strs))
-	for _, str := range strs {
+	g := make(map[key][]string, len(input))
+	for _, str := range input {
 		k := key{}
 		for i := range str {
 			k[str[i]-'a']++
