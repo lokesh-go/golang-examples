@@ -13,11 +13,11 @@ import (
  * }
  */
 
-func isValidBST(root *trees.TreeNode) bool {
+func isValidBST(root *TreeNode) bool {
 	return isBST(root, math.MinInt, math.MaxInt)
 }
 
-func isBST(node *trees.TreeNode, min int, max int) bool {
+func isBST(node *TreeNode, min int, max int) bool {
 	if node == nil {
 		return true
 	}
