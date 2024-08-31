@@ -1,4 +1,6 @@
-package main
+package trees
+
+import "github.com/lokesh-go/golang-examples/dsa/questions"
 
 /**
  * Definition for a binary tree node.
@@ -9,7 +11,7 @@ package main
  * }
  */
 
-func lowestCommonAncestor(root, p, q *TreeNode) *TreeNode {
+func lowestCommonAncestor(root, p, q *questions.TreeNode) *questions.TreeNode {
 	if root == nil || root == p || root == q {
 		return root
 	}

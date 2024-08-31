@@ -1,4 +1,4 @@
-package main
+package slidingwindow
 
 func lengthOfLongestSubstring(s string) int {
 	var longest int

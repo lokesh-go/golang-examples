@@ -1,4 +1,4 @@
-package main
+package twopointers
 
 func maxArea(height []int) int {
 	var area int

@@ -1,4 +1,4 @@
-package main
+package arrayandhashing
 
 func longestConsecutive(nums []int) int {
 	numMap := make(map[int]struct{}, len(nums))

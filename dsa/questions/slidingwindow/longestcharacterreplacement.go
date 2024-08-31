@@ -1,4 +1,4 @@
-package main
+package slidingwindow
 
 func characterReplacement(s string, k int) int {
 	var res int

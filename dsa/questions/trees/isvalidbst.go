@@ -1,6 +1,8 @@
-package main
+package trees
 
-import "math"
+import (
+	"math"
+)
 
 /**
  * Definition for a binary tree node.
@@ -11,11 +13,11 @@ import "math"
  * }
  */
 
-func isValidBST(root *TreeNode) bool {
+func isValidBST(root *trees.TreeNode) bool {
 	return isBST(root, math.MinInt, math.MaxInt)
 }
 
-func isBST(node *TreeNode, min int, max int) bool {
+func isBST(node *trees.TreeNode, min int, max int) bool {
 	if node == nil {
 		return true
 	}
