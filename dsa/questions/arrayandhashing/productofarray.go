@@ -1,4 +1,4 @@
-package arrayandhashing
+package main
 
 func productExceptSelf(nums []int) []int {
 	product := int(1)

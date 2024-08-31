@@ -1,4 +1,4 @@
-package arrayandhashing
+package main
 
 import (
 	"strconv"

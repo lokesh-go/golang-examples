@@ -1,4 +1,4 @@
-package arrayandhashing
+package main
 
 func groupAnagrams(input []string) [][]string {
 	type key [26]byte

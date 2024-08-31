@@ -1,4 +1,4 @@
-package arrayandhashing
+package main
 
 func topKFrequent(nums []int, k int) []int {
 	freq := make(map[int]int, len(nums))

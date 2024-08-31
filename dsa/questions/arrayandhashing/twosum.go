@@ -1,4 +1,4 @@
-package arrayandhashing
+package main
 
 func twoSum(nums []int, target int) []int {
 	hashMap := map[int]int{}
