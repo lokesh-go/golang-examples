@@ -48,3 +48,25 @@ func bfs(grid [][]byte, visited [][]bool, rowIndex int, columnIndex int) {
 		}
 	}
 }
+
+// Can also solve it using DFS
+func dfs(grid [][]byte, visited [][]bool, rowIndex int, columnIndex int) {
+	// Directions for 4 neighbors (up, down, left, right)
+	directions := [][]int{{-1, 0}, {1, 0}, {0, -1}, {0, 1}}
+
+	// Mark the current cell as visited
+	visited[rowIndex][columnIndex] = true
+
+	// Explore each neighbor using DFS
+	for _, d := range directions {
+		vR := rowIndex + d[0]
+		vC := columnIndex + d[1]
+
+		// Validate index and continue DFS if not visited and part of an island
+		if vR >= 0 && vR < len(grid) && vC >= 0 && vC < len(grid[0]) {
+			if !visited[vR][vC] && grid[vR][vC] == '1' {
+				dfs(grid, visited, vR, vC)
+			}
+		}
+	}
+}
