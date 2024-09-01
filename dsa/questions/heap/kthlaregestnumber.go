@@ -1,31 +1,51 @@
 package main
 
 import (
-	"fmt"
-	"strconv"
+	"container/heap"
 )
 
-func kthLargestNumber(nums []string, k int) string {
-	resArray := make([]int, 101)
+type maxHeap []int
 
-	for _, num := range nums {
-		n, _ := strconv.Atoi(num)
-		resArray[n]++
-	}
-
-	fmt.Println(resArray)
-
-	for i := len(resArray) - 1; i >= 0; i-- {
-		if resArray[i] > 0 {
-			k = k - resArray[i]
-			if k <= 0 {
-				return strconv.Itoa(i)
-			}
-		}
-	}
-	return ""
+func (h maxHeap) Len() int {
+	return len(h)
 }
 
+func (h maxHeap) Less(i, j int) bool {
+	return h[i] > h[j]
+}
+
+func (h maxHeap) Swap(i, j int) {
+	h[i], h[j] = h[j], h[i]
+}
+
+func (h *maxHeap) Pop() interface{} {
+	popVal := (*h)[len(*h)-1]
+	*h = (*h)[0 : len(*h)-1]
+	return popVal
+}
+
+func (h *maxHeap) Push(x interface{}) {
+	*h = append(*h, x.(int))
+}
+
+func findKthLargest(nums []int, k int) int {
+	h := &maxHeap{}
+	heap.Init(h)
+
+	for _, n := range nums {
+		heap.Push(h, n)
+	}
+
+	var kthLargestEle int
+	for i := 0; i < k; i++ {
+		kthLargestEle = heap.Pop(h).(int)
+	}
+
+	return kthLargestEle
+}
+
+/*
 func main() {
-	fmt.Println(kthLargestNumber([]string{"0", "0"}, 2))
+	fmt.Println(kthLargestNumber([]int{0}, 1))
 }
+*/
