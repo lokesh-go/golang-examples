@@ -18,7 +18,7 @@ func sumHelper(candidates []int, target int, currentIndex int, currentSum int, a
 	}
 
 	// There is two possiblities
-	// Case 1: Either we can not choose a number and move index to ahead
+	// Case 1: Either we can not choose a number and move index to ahead - skip
 	sumHelper(candidates, target, currentIndex+1, currentSum, answers, chooseNumberAtEachLevel)
 
 	// Case 2: Either we can choose a number
