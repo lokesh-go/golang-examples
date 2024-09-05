@@ -29,3 +29,5 @@ type dal struct{}
 
 // InsertIntoDB ...
 func (d *dal) InsertIntoDB(userId string) {}
+
+// NOTE : Here, the UserService, EmailService and DAL each have a single responsibility.
