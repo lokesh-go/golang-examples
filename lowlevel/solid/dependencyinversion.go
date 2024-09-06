@@ -14,7 +14,7 @@ type us struct {
 type dbRepository struct{}
 
 // Save ...
-func (d *dbRepository) Save(userId string) error {}
+func (d *dbRepository) Save(userId string) error { return nil }
 
 // Caller
 func call() {
