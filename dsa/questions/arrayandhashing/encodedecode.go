@@ -1,5 +1,18 @@
 package main
 
+/*
+	1. Encode like: len(str) + "#" + str -> 6#lokesh
+		- # -> Separator
+		- len(str) -> After separator how much character we have to take
+	2. Decode -> Iterate over the encoded string
+		- If char == '#'
+			- wordLen := int(encodedStr[ind-1]) - '0'
+			- word := encodedStr[ind+1 : ind + wordLen + 1]
+			- res = append(res, word)
+			- ind = ind + wordLength
+		- Otherwise increments
+*/
+
 import (
 	"strconv"
 )
